@@ -4,6 +4,7 @@ import Button from "../Button/Button.jsx";
 import { MdMessage } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
+import { TbRubberStampOff } from "react-icons/tb";
 
 function ContactForm() {
   const [name, setName] = useState("kishan");
@@ -22,13 +23,18 @@ function ContactForm() {
       <div className={`${styles.contact_form}`}>
         <div className={`${styles.top_btn}`}>
           <Button
+            iswhitebtn={false}
             text={"VIA SUPPORT CHAT"}
             icon={<MdMessage fontSize="24px" />}
           />
-          <Button text={"VIA CALL"} icon={<FaPhoneAlt fontSize="24px" />} />
+          <Button
+            iswhitebtn={false}
+            text={"VIA CALL"}
+            icon={<FaPhoneAlt fontSize="24px" />}
+          />
         </div>
         <Button
-          isOutline={true}
+          iswhitebtn={TbRubberStampOff}
           text="VIA EMAIL FORM"
           icon={<HiMail fontSize="24px" />}
         />
